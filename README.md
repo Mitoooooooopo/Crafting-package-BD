@@ -45,5 +45,7 @@ Run
 python3 manage.py migrate craftings
 ```
 
-At the same admin_panel folder
-![IMG_20250506_162010](https://github.com/user-attachments/assets/432f1576-ae20-47e7-96dd-50ead20009c0)
+![IMG_20250506_162010](https://github.com/user-attachments/assets/432f1576-ae20-47e7-96dd-50ead20009c0) 
+And Your Done 
+> [!IMPORTANT]
+> Restart Your Bot after this then only this will take effect 
