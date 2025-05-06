@@ -35,4 +35,9 @@ create a folder named `craftings` in your `BallsDex-DiscordBot/admin_panel` and 
 Adding screenshot to avoid any confusion
 
 # Step 5 
+Run 
+```py
+python3 manage.py migrate craftings
+```
 
+At the same admin_panel folder
