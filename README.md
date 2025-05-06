@@ -19,7 +19,7 @@ TORTOISE_ORM = {
     "connections": {"default": os.environ.get("BALLSDEXBOT_DB_URL")},
     "apps": {
         "models": {
-            "models": ["ballsdex.core.models", "ballsdex.packages.achievements.models", "ballsdex.packages.crafting.models"],
+            "models": ["ballsdex.core.models"],
             "default_connection": "default",
         },
     },
