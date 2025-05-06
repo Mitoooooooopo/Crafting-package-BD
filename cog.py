@@ -54,13 +54,10 @@ class craft(commands.GroupCog):
         player_owned_ball_type_ids = await BallInstance.filter(player=player).values_list("ball_id", flat=True)
         player_owned_ball_type_ids = list(player_owned_ball_type_ids)
         
-        # Assuming you get recipe_id from the slash command params
-
         ingredients = await recipe.ingredients.all().prefetch_related("ingredient")    
                           
         for ingredient in ingredients:
-             ball_id = ingredient.ingredient_id 
-                           # do your logic with ball_id and ingredient.quantity               
+             ball_id = ingredient.ingredient_id             
                
         used_instances = []
         missing = [] 
@@ -69,12 +66,12 @@ class craft(commands.GroupCog):
             ball_id = ingredient.ingredient_id
             quantity = ingredient.quantity
         
-            # Check if player owns this ball type
+            # Check if player own the ball needed 
             if ball_id not in player_owned_ball_type_ids:
                 missing.append((ingredient.ingredient.country, quantity))
                 continue
         
-            # Get instances of this ball
+            # Get instances of balls we exclude specials you can change it here 
             owned_instances = await BallInstance.filter(
                 player=player, ball_id=ball_id,
                 special=None
@@ -85,7 +82,7 @@ class craft(commands.GroupCog):
             else:
                 used_instances.extend(owned_instances)
         
-        # Handle missing balls
+        # check missing balls
         if missing:
             missing_msg = "\n".join(f"- {name} x{qty}" for name, qty in missing)
             await interaction.response.send_message(
