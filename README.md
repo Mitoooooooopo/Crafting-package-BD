@@ -1,6 +1,8 @@
 # Crafting-package-BD
 A simple system for crafting For those who want a craft command for their Ballsdex instance  
-
+> [!IMPORTANT]
+> Any Bugs, errors, or confusion You won't get any support from official Ballsdex server for this package since this is a custom one You need to directly dm me @An Unknown Guy just ping me on any server or dm 
+> 
 > [!Tip]
 > Read howtouse.txt to understand how to use this package 
 > 
