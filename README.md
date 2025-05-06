@@ -28,3 +28,5 @@ TORTOISE_ORM = {
 
 To reflect the models in crafting folder ![IMG_20250506_155944](https://github.com/user-attachments/assets/412695ee-d6ca-4f29-bb28-9aa08167b978)
 
+# Step 4 
+create a folder named `craftings` in your `BallsDex-DiscordBot/admin_panel` and paste every file from the craftings folder including including the migration folder into your craftings folder 
