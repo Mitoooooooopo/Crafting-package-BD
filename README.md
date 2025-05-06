@@ -14,3 +14,17 @@ Add the package to your config.yml, open your config.yml scroll down until your 
 
 # Step 3 
 Open your `__main__.py` and edit the 
+```py
+TORTOISE_ORM = {
+    "connections": {"default": os.environ.get("BALLSDEXBOT_DB_URL")},
+    "apps": {
+        "models": {
+            "models": ["ballsdex.core.models", "ballsdex.packages.achievements.models", "ballsdex.packages.crafting.models"],
+            "default_connection": "default",
+        },
+    },
+}
+```
+
+To reflect the models in crafting folder ![IMG_20250506_155944](https://github.com/user-attachments/assets/412695ee-d6ca-4f29-bb28-9aa08167b978)
+
