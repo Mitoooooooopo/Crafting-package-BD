@@ -1,2 +1,4 @@
 # Crafting-package-BD
-A simple system for crafting a Ball For Ballsdex 
+A simple system for crafting For those who want a craft command for their Ballsdex instance 
+
+How to install
