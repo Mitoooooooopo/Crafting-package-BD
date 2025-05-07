@@ -48,7 +48,7 @@ INSTALLED_APPS.append("craftings")
 Then at your base admin_panel folder,
 Run 
 ```py
-python3 manage.py migrate craftings
+docker compose exec admin-panel python3 manage.py migrate craftings
 ```
 
 ![IMG_20250506_162010](https://github.com/user-attachments/assets/432f1576-ae20-47e7-96dd-50ead20009c0) 
