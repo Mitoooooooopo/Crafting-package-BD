@@ -56,7 +56,9 @@ Then
 ```py
 docker compose exec admin-panel python3 manage.py migrate craftings
 ```
+![Screenshot_2025-05-08-15-07-05-36](https://github.com/user-attachments/assets/b78825a4-8076-4c6f-873e-ced65451e7e2)
+
 
 And Your Done 
 > [!IMPORTANT]
-> Restart Your Bot after this then only this will take effect 
+> I see alot of people get issues with the last step cause a lot of issues so if any error regarding the migrations please contact me directly 
