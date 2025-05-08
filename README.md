@@ -46,16 +46,17 @@ Go to `BallsDex-DiscordBot/admin_panel/admin_panel/settings` there open `local.p
 INSTALLED_APPS.append("craftings")
 ```
 Then at your base admin_panel folder,
-Run 
+Run  
+
+```py
+docker compose exec admin-panel python3 manage.py makemigrations craftings
+```
+Then 
+
 ```py
 docker compose exec admin-panel python3 manage.py migrate craftings
 ```
-Or if you run without docker like using poetry the only run 
-```py
-poetry run python3 manage.py migrate
-```
 
-![IMG_20250506_162010](https://github.com/user-attachments/assets/432f1576-ae20-47e7-96dd-50ead20009c0) 
 And Your Done 
 > [!IMPORTANT]
 > Restart Your Bot after this then only this will take effect 
