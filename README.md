@@ -73,4 +73,4 @@ docker compose exec admin-panel python3 manage.py migrate craftings
 
 And Your Done 
 > [!IMPORTANT]
-> I see alot of people get issues with the last step cause a lot of issues so if any error regarding the migrations please contact me directly 
+> I see alot of people get issues with the migrations any error or confusion regarding the migrations please contact me directly 
