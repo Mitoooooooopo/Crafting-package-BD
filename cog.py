@@ -86,7 +86,7 @@ class craft(commands.GroupCog):
             if len(owned_instances) < quantity: 
                 emoji = self.bot.get_emoji(ingredient.ingredient.emoji_id)
                 special_prefix = f"{an_special.emoji} {an_special.name} " if an_special else ""
-                missing.append((f"{special_prefix}{ingredient.ingredient.country}", emoji, quantity - len(owned_instances))
+                missing.append((f"{special_prefix}{ingredient.ingredient.country}", emoji, quantity - len(owned_instances)))
             else:
                 used_instances.extend(owned_instances)
         
