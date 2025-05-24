@@ -79,11 +79,14 @@ class craft(commands.GroupCog):
             # Get instances of balls we exclude specials you can change it here 
             filter_conditions = {"player": player, "ball_id": ball_id}
             if an_special is not None:
-                filter_conditions["special"] = an_special                                           else:
+                filter_conditions["special"] = an_special  
+            else:
                 filter_conditions["special"] = None
         
-            if len(owned_instances) < quantity:
-                missing.append((ingredient.ingredient.country, quantity - len(owned_instances)))
+            if len(owned_instances) < quantity: 
+                emoji = self.bot.get_emoji(ingredient.ingredient.emoji_id)
+                special_prefix = f"{an_special.emoji} {an_special.name} " if an_special else ""
+                missing.append((f"{special_prefix}{ingredient.ingredient.country}", emoji, quantity - len(owned_instances))
             else:
                 used_instances.extend(owned_instances)
         
