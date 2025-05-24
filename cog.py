@@ -99,9 +99,11 @@ class craft(commands.GroupCog):
             return
         
         await recipe.fetch_related("result")
-        crafted_instance = await BallInstance.create(player=player, ball=recipe.result)        
+        crafted_instance = await BallInstance.create(player=player, ball=recipe.result)       
+     
+        name = f" {an_special.emoji} {an_special.name} {recipe.result.country}" if an_special else recipe.result.country
         await interaction.response.send_message(
-            f"✅ Wow successfully crafted **{recipe.result.country}**!", ephemeral=True
+            f"✅ Wow successfully crafted **{name}**!", ephemeral=True
         )
         
         await BallInstance.filter(id__in=[ball.id for ball in used_instances]).delete()
