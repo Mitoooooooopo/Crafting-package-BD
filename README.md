@@ -1,6 +1,8 @@
 # Crafting-package-BD
 A simple system for crafting For those who want a craft command for their Ballsdex instance  
+
 **what changed**
+
 .Added ability to craft specials of a ball 
 
 .now give random status bonus instead of +0 +0
