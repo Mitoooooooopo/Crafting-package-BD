@@ -100,8 +100,14 @@ class craft(commands.GroupCog):
             return
         
         await recipe.fetch_related("result")
-        crafted_instance = await BallInstance.create(player=player, ball=recipe.result)       
-     
+        crafted_instance = await BallInstance.create(
+                            player=player,
+                            ball=recipe.result,
+                            special=an_special if an_special else None,
+                            health_bonus=random.randint(-settings.max_attack_bonus, settings.max_attack_bonus),
+                            attack_bonus=random.randint(-settings.max_attack_bonus, settings.max_attack_bonus),
+                          )
+  
         name = f" {an_special.emoji} {an_special.name} {recipe.result.country}" if an_special else recipe.result.country
         await interaction.response.send_message(
             f"✅ Wow successfully crafted **{name}**!", ephemeral=True
