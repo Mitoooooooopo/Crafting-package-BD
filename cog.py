@@ -35,13 +35,13 @@ class craft(commands.GroupCog):
         self.bot = bot
 
     @app_commands.command()    
-    async def ball(
+    async def countryball(
       self, 
       interaction: discord.Interaction,
       recipe: CraftTransform
     ):  
         """
-        craft a ball.
+        craft a countryball.
              
         Parameters
         ----------
