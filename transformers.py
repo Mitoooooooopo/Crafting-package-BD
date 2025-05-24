@@ -35,7 +35,7 @@ class CraftTransformer(ModelTransformer[CraftingRecipe]):
         items = await self.load_items()
         return [
             app_commands.Choice(
-                name=f"Recipe #{item.pk} → {item.result.country}", value=f"{item.pk}"
+                name=f"{item.result.country}", value=f"{item.pk}"
             )
             for item in items
             if value.lower() in item.result.country.lower()
