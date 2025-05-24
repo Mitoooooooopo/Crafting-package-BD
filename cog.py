@@ -77,10 +77,10 @@ class craft(commands.GroupCog):
                 continue
         
             # Get instances of balls we exclude specials you can change it here 
-            owned_instances = await BallInstance.filter(
-                player=player, ball_id=ball_id,
-                special=None
-            ).limit(quantity).all()
+            filter_conditions = {"player": player, "ball_id": ball_id}
+            if an_special is not None:
+                filter_conditions["special"] = an_special                                           else:
+                filter_conditions["special"] = None
         
             if len(owned_instances) < quantity:
                 missing.append((ingredient.ingredient.country, quantity - len(owned_instances)))
