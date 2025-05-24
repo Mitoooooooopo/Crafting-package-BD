@@ -1,7 +1,7 @@
 # Crafting-package-BD
 A simple system for crafting For custom ballsdex instances.
 
-**what changed**
+**what changed(change log)**
 
 .Added ability to craft specials of a ball 
 
