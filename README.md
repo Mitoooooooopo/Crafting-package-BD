@@ -7,7 +7,6 @@ A simple system for crafting For those who want a craft command for their Ballsd
 
 .now give random status bonus instead of +0 +0
 
-.now replaced some places without countryball to match your Bot 
 
 .changed tranformer to just show the recipe name instead of recipe -> recipe name 
 
