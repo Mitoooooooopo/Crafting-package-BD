@@ -9,7 +9,7 @@ from .models import CraftingRecipe
 from .models import CraftingIngredient  
 from ballsdex.settings import settings 
 from .transformers import CraftTransform
-from ballsdex.settings import settings
+from ballsdex.core.utils.transformers import SpecialEnabledTransform 
 from ballsdex.core.bot import BallsDexBot
 
 if TYPE_CHECKING:
