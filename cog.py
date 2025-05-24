@@ -3,7 +3,8 @@ from discord.ext import commands
 from discord import app_commands
 from typing import TYPE_CHECKING
 import discord
- 
+import random 
+
 from .models import CraftingRecipe 
 from .models import CraftingIngredient  
 from ballsdex.settings import settings 
