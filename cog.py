@@ -38,7 +38,8 @@ class craft(commands.GroupCog):
     async def countryball(
       self, 
       interaction: discord.Interaction,
-      recipe: CraftTransform
+      recipe: CraftTransform,
+      an_special: SpecialEnabledTransform = None, 
     ):  
         """
         craft a countryball.
@@ -46,7 +47,9 @@ class craft(commands.GroupCog):
         Parameters
         ----------
         craft: CraftTransform
-           ball you want to craft 
+           countryball you want to craft 
+        an_special: SpecialEnabledTransform 
+           Craft a special variant of the countryball 
         """ 
         player, _ = await Player.get_or_create(discord_id=interaction.user.id)
         
