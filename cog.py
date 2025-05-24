@@ -12,7 +12,6 @@ from .transformers import CraftTransform
 from ballsdex.core.utils.transformers import BallEnabledTransform
 from ballsdex.core.utils.transformers import SpecialEnabledTransform
 from ballsdex.core.bot import BallsDexBot
-from ballsdex.settings import settings
 
 if TYPE_CHECKING:
     from ballsdex.core.bot import BallsDexBot
