@@ -46,11 +46,13 @@ class craft(commands.GroupCog):
              
         Parameters
         ----------
-        craft: CraftTransform
+        recipe: CraftTransform
            countryball you want to craft 
         an_special: SpecialEnabledTransform 
            Craft a special variant of the countryball 
         """ 
+        recipe = countryball  
+     
         player, _ = await Player.get_or_create(discord_id=interaction.user.id)
         
         # Grab all ball type IDs the player owns
