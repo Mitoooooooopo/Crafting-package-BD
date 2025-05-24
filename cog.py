@@ -8,6 +8,7 @@ from .models import CraftingRecipe
 from .models import CraftingIngredient  
 from ballsdex.settings import settings 
 from .transformers import CraftTransform
+from ballsdex.settings import settings
 from ballsdex.core.bot import BallsDexBot
 
 if TYPE_CHECKING:
@@ -94,7 +95,7 @@ class craft(commands.GroupCog):
         if missing:
             missing_msg = "\n".join(f"- {name} x{qty}" for name, qty in missing)
             await interaction.response.send_message(
-                f"❌ You're missing the following balls to craft:\n{missing_msg}", ephemeral=True
+                f"❌ You're missing the following {settings.plural_collectible_name} to craft:\n{missing_msg}", ephemeral=True
             )
             return
         
