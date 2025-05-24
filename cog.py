@@ -83,8 +83,10 @@ class craft(commands.GroupCog):
             if an_special is not None:
                 filter_conditions["special"] = an_special  
             else:
-                filter_conditions["special"] = None
-        
+                filter_conditions["special"] = None 
+                
+            owned_instances = await BallInstance.filter(**filter_conditions).limit(quantity).all()   
+            
             if len(owned_instances) < quantity: 
                 emoji = self.bot.get_emoji(ingredient.ingredient.emoji_id)
                 special_prefix = f"{an_special.emoji} {an_special.name} " if an_special else ""
