@@ -3,14 +3,14 @@ A simple system for crafting For custom ballsdex instances.
 
 **what changed(change log)**
 
-.Added ability to craft specials of a ball 
+new /craft begin command
 
-.now give random status bonus instead of +0 +0
+new /craft add and remove command so it won't automatically delete 
 
+better menu 
 
-.changed tranformer to just show the recipe name instead of recipe -> recipe name 
+new /craft recipes command 
 
-.now shows ball emojis alongside missing list 
 
 > [!IMPORTANT]
 > Any Bugs, errors, or confusion You won't get any support from official Ballsdex server for this package since this is a custom one You need to directly dm me @An Unknown Guy just ping me on any server or dm 
@@ -22,7 +22,7 @@ A simple system for crafting For custom ballsdex instances.
 
 # Step 1 
 Make a folder called `crafting` at your `BallsDex-DiscordBot/ballsdex/packages`
-Copy the `__init__.py` `cog.py` file `models.py` file and `transformer.py` file to the new crafting folder you made 
+Copy the `__init__.py` `cog.py` file `models.py` file `crafting_utils.py` `logic.py` `crafting_views.py` and `session_manager.py` file to the new crafting folder you made 
 
 # Step 2 
 Add the package to your config.yml, open your config.yml scroll down until your see 
