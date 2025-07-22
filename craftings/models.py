@@ -38,3 +38,28 @@ class CraftingIngredient(models.Model):
         if self.recipe:
             return f"{self.recipe} Recipe"
         return "Unnamed Crafting Recipe"
+
+class CraftingIngredientGroup(models.Model):
+    recipe = models.ForeignKey("CraftingRecipe", on_delete=models.CASCADE, related_name="ingredient_groups")
+    name = models.CharField(max_length=100)
+    required_count = models.PositiveIntegerField(default=1)
+
+    class Meta:
+        managed=True
+        db_table="craftingingredientgroup"
+
+    def __str__(self):
+        return f"{self.name} (need {self.required_count})"
+
+
+class CraftingGroupOption(models.Model):
+    group = models.ForeignKey("CraftingIngredientGroup", on_delete=models.CASCADE, related_name="options")
+    ball = models.ForeignKey(Ball, on_delete=models.CASCADE, related_name="group_memberships")
+
+    class Meta:
+        managed=True
+        db_table= "craftinggroupoption"
+        unique_together = ("group", "ball")
+
+    def __str__(self):
+        return f"{self.ball} in {self.group.name}"
