@@ -45,8 +45,7 @@ class Craft(commands.GroupCog):
     def __init__(self, bot):
         self.bot = bot
         self.settings = settings
-        # In-memory storage for crafting sessions (you might want to use Redis or database)
-        
+            
     @app_commands.command(name="begin", description="Start a crafting session.")
     async def craft_begin(self, interaction: discord.Interaction, special: Optional[SpecialEnabledTransform] = None):
         await interaction.response.defer()
@@ -76,7 +75,6 @@ class Craft(commands.GroupCog):
         await interaction.response.defer(ephemeral=True)
         user_id = interaction.user.id
 
-        # Inside /craft add command, after fetching ball_instance
         await countryball.fetch_related("ball", "special")
         
         # Check if ball is involved in a trade
