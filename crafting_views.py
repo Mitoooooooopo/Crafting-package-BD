@@ -137,7 +137,7 @@ class CraftingView(discord.ui.View):
             instance_ids_to_delete = [ball.id for ball in ball_instances_to_delete]
     
             try:
-                # Remove any trade object references that might be lingering
+                # Remove any trade object references because I got an error that didn't delete the ingredients 
                 await TradeObject.filter(ballinstance_id__in=instance_ids_to_delete).delete()
                 print(f"Cleaned up trade object references for: {instance_ids_to_delete}")
             except Exception as e:
