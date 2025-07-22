@@ -13,7 +13,7 @@ new /craft recipes command
 
 
 > [!IMPORTANT]
-> Any Bugs, errors, or confusion You won't get any support from official Ballsdex server for this package since this is a custom one You need to directly dm me @An Unknown Guy just ping me on any server or dm 
+> Any Bugs, errors, or confusion in steps You won't get any direct support from official Ballsdex server for this package since this is a custom one You need to directly contact @An Unknown Guy or just ping me on the Ballsdex Developer server server or direct message me 
 
 > [!Tip]
 > Read howtouse.txt to understand how to use this package 
