@@ -23,7 +23,7 @@ class CraftingRecipe(models.Model):
     result = fields.ForeignKeyField("models.Ball", related_name="crafted_by")
 
     class Meta:
-        db_table = "craftingrecipe"
+        table = "craftingrecipe"
 
     def __str__(self) -> str:
         return str(self.pk)
@@ -35,7 +35,7 @@ class CraftingIngredient(models.Model):
     quantity = fields.IntField(default=1)
 
     class Meta:
-        db_table = "craftingingredient"
+        table = "craftingingredient"
         unique_together = ("recipe", "ingredient")  
         
     def __str__(self) -> str:
@@ -48,7 +48,7 @@ class CraftingIngredientGroup(models.Model):
     required_count = fields.IntField(default=1)  # How many from this group needed
 
     class Meta:
-        db_table = "craftingingredientgroup"
+        table = "craftingingredientgroup"
 
     def __str__(self) -> str:
         return f"{self.name} (choose {self.required_count})"
@@ -59,7 +59,7 @@ class CraftingGroupOption(models.Model):
     ball = fields.ForeignKeyField("models.Ball", related_name="group_memberships")
 
     class Meta:
-        db_table = "craftinggroupoption"
+        table = "craftinggroupoption"
         unique_together = ("group", "ball")
 
     def __str__(self) -> str:
