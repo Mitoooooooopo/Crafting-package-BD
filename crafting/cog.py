@@ -12,7 +12,7 @@ from .models import CraftingIngredient
 from .models import CraftingIngredientGroup
 from .models import CraftingGroupOption
 
-from ballsdex.core.utils.transformers import BallTransform
+from ballsdex.core.utils.transformers import BallEnabledTransform
 from ballsdex.core.utils.transformers import BallInstanceTransform
 from ballsdex.core.utils.transformers import SpecialEnabledTransform, TradeCommandType
 from ballsdex.core.bot import BallsDexBot
@@ -147,7 +147,7 @@ class Craft(commands.GroupCog):
         await update_crafting_display(interaction, user_id)
 
     @app_commands.command(name="recipes", description="show all active crafting recipes")
-    async def craft_recipes(self, interaction: discord.Interaction, countryball: Optional[BallTransform] = None):
+    async def craft_recipes(self, interaction: discord.Interaction, countryball: Optional[BallEnabledTransform] = None):
         ball = countryball
         
         if ball:
