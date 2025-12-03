@@ -45,7 +45,7 @@ class Craft(commands.GroupCog):
     def __init__(self, bot):
         self.bot = bot
         self.settings = settings
-        # In-memory storage for crafting sessions (you might want to use Redis or database)
+        
         
     @app_commands.command(name="begin", description="Start a crafting session.")
     async def craft_begin(self, interaction: discord.Interaction, special: Optional[SpecialEnabledTransform] = None):
